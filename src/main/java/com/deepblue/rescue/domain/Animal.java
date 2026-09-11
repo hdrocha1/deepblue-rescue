@@ -38,7 +38,7 @@ public class Animal {
     @OneToMany(mappedBy = "animal", fetch = FetchType.LAZY)
     private List<Treatment> treatments = new ArrayList<>();
 
-    @Column(name = "tracking_device_code", length = 50, unique = true)
+    @Column(name = "gps_device", length = 50, unique = true)
     private String trackingDeviceCode;
 
     protected Animal() {}
