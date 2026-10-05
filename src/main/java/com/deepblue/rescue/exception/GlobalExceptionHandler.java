@@ -53,7 +53,7 @@ public class GlobalExceptionHandler {
                 .collect(Collectors.toMap(
                         error -> error.getField(),
                         error -> error.getDefaultMessage(),
-                        (first, second) -> first
+                        (first, second) -> first.toLowerCase().contains("required") ? first : second
                 ));
 
         HttpStatus status = HttpStatus.BAD_REQUEST;
